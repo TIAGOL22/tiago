@@ -1,0 +1,213 @@
+
+guia de unidades de medida no css : quando
+usar cada uma 
+
+1.px( pixels)
+
+uso recomendado :
+
+para tamanhos fixos e precisos que nao devem 
+variar com o tamanho da tela ou do texto. 
+ideal para BORDAS , MARGENS e tamanhos de
+elementos que precisam MANTER uma aparencia
+CONSISTENTE .
+
+quando evitar :
+
+quando voçê deseja que o desing seja mais 
+flexivel e adaptavel a diferentes tamanhos de 
+tela e configurações de acessibilidade . 
+
+
+ exemplo de uso : 
+
+ html
+ < div 
+
+ </div>
+
+ css
+
+ . box {
+        widht : 300px; largura fixa
+        heigth : 200 px ; altura fixa
+        bacground-color :red ;
+
+        }
+
+
+
+ 2.em (relative to parent font size )
+
+ uso recomendado :
+
+
+ quando voce deseja que o tamanho de um
+ elementro seja relativo ao tamanho da fonte de 
+ seu elemento pai .
+ ideal para criar layouts e tipografia que se 
+ adaptam ao tamanho do texto pai . 
+
+
+ quando evitar :
+
+ se voce precisa de concistencia em relacao ao 
+ tamanho da fonte em toda a aplicacao,
+ independente da hierarquia de elementos.
+
+
+ exemplo de uso :
+ html
+
+ <div class ='container'' >
+
+ <div class=''child '' >
+
+ </div>
+
+</div >
+
+
+css 
+.container {
+    font - size : 16px; / tamanho base -pai*/
+}
+
+
+
+
+
+
+
+3.rem ( relative to root font size )
+
+uso recomendado : 
+
+para criar tamanhos de fonte e espaçamentos
+consistentes em toda a aplicaçao , baseando-se
+no tamanho da fonte raiz( <html>).
+
+ideal para layouts e tipografia que precisam 
+ser consistentes independentemento do tamanho da 
+fontes dos elementos pai .
+
+quando evitar :
+quando voçe quer um tamanho que seja relativo
+apenas o elemento pai especifico e nao a 
+raiz.
+
+exemplo de uso :
+
+html 
+<div class=`´container´>
+
+      <div class='text' >
+              <p> lorem </p>
+      </div>
+
+</div> 
+
+
+
+css
+
+html {
+    font-size:16px;*/ tamanho base da fonte
+    */ 
+}
+
+. text{
+    font-size : 2rem;/*
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+
+4.vh (viewport heigth)
+
+uso recomendado :
+
+para definir tamanhos de altura relativos a 
+altura do viewport , como para criar secoes de
+tela cheia ou elementos que devem ocupar uma 
+porcentagem da altura da tela.
+ideal para layouts que devem se ajustar a 
+altura da teka do usuario.
+
+
+quando devo evitar :
+ para elementos que não precisam ser sensiveis 
+ ao tamanho da viewport e devem ter tamanhos
+ fixos ou proporcionais ao conteudo.
+
+ exemplo de uso:
+ html
+ <section class='fullscreen-section'>
+          <p> lorem </p>
+ </section> 
+ testar em tamanhos de telas diferentes .
+
+
+ css . fullscren-section {
+    heigth:100vh;/* 100% da altura da 
+    viewport*/
+    widht: 50vw
+    bacoground-color:black
+ } 
+
+ -------------------------------------------------------------------------------------------------------------
+ -------------------------------
+
+ 5.vw (viewport- widht)
+
+ uso recomendado :
+
+ para definir tamanhos de largura relativos a 
+ largura de viewport , util para criar layouts 
+ responsivos ou elementos que devem ajustar a 
+ largura da tela.
+ ideal para elementos que precisam ocupar uma 
+ porcentagem da largura da tela do usuario.
+
+
+ quando evitar :
+
+ para elemtnos cuja largura nao deve depender
+ da largura da viewport e deve ser fixa ou
+ proporcional ao conteudo .
+
+ exemplo de uso :
+
+ html
+ <section class='responsive-element' >
+          <p> lorem </p>
+</section>
+
+css
+
+.responsive -element
+    widht :50vw;/* 50% da largura da 
+    viewport*/
+    heigth :50vh;
+    bacground-color 
+
+
+    6.% {percentual}
+
+
+uso recomendado:
+
+para definir tamanhos relativos ao tamanho do 
+elemento pai,ideal para layouts flexivel e 
+adaptaveis.
+util para definir larguras e alturas de 
+elementos dentro dos containers com tamanhos 
+variaveis.
+
+quando evitar :
+
+quando o tamanho nao deve depender do 
+elemento pai , especialmente se o elemento pai 
+nao tiver um tamanho fixo ou prevesivel .
