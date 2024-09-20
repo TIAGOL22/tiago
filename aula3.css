@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6; /*Distância entre linhas*/
+
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem; /*padding rem para consistência com o tamanho da fonte raiz*/
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+
+.main-content {
+    padding: 2rem; /*espaço interno  da área principal*/
+    color: #3498db;
+    
+    
+}
+
+.section {
+    padding: 2em; /*padding em, relativo ao tamanho da fonte do pai*/
+    margin-bottom: 2em; /*Espaço abaixo de cada seção*/
+    border-radius: 8px;
+    position: relative; /*o elemento e posicionado em relção a sua posição original.voçe*/
+    
+}
+
+.section-1 {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.section-2 {
+    background-color: #2ecc71;
+    color: white;
+}
+
+
+.section-3 {
+    background-color: #d0df05;
+    color: white;
+}
+
+
+.box {
+    background-color: #fff;
+    color: black;
+    padding: 2rem; /*padding aumentado para maior visibilidade*/
+    margin: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem; /*Tamanho da fonte aumentado para maior legibilidade*/
+    box-sizing: border-box; /*Inclui padding e borda no cálculo da largura*/
+}
+
+.box-1, .box-2, .box-3, .box-4, .box-5, .box-6 {
+    width: calc(50% - 2rem); /*Largura das caixas ajustada para caber duas por linha com espaçamento*/
+    float: left; /*É como se você estivesse empurrando as caixas para o lado esquerdo da mesa. isso faz com que,  quando você coloca uma nova caixa, ela "desça" para a próxima linha, mantendo as outras caixas alinhadas */
+}
+
+.section::after {
+    content: ""; /*Adicionar um elemento invisivel após o conteúdo da  seção
+    isso cria um "espaço vazio" invisivel na sua festa. É como se lococasse uma pequena bandeja vazia na mesa, que ninguem vê, mas que ajuda a manter tudo organizado*/
+
+     /* Essa propriedades é necessaria para criar um pseudo-elemento invisivel que ajuda a controlar o layout. Sem ela, o containêr (as caixas de frutas), o que pode causar problemas na exibição. */
+     
+
+
+    display: table; /*Faz com que o elemento invisivel se comporte como um bloco, forçando o containêr a incluir elementos flutuantes
+    
+      Esse "espaço vazio" se comporta como uma parte da mesa. Ele age como um bloco, o que significa que  ajuda a agrupar tudo que está na mesa, fazendo com que os itens ao redor se organizem melhor.
+      
+      Ao fazer o elemento invisivel se cpmportar como uma tabela, você garante que ele atue como um bloco que mantém a estrutura do containêr. Isso ajuda a forçar o contêiner a "abraçar" todos os elementos flutuantes, evitando que eles "saiam" do espaço que deveriam ocupar 
+    */ 
+
+    clear: both; /*Garante que o contêiner "limpe" os elementos flutuantes, evitando problemas de layout 
+    
+    Isso garante que, após as caixas se frutas (ou outros itens) na mesa, nada mais flutue ao lado. É como se você estivesse dizendo: "Depois da bandeja vazia, nada pode ficar ao lado; tudo deve ficar em uma nova linha. Isso evita que a mesa fique desorganizada e os itens se sobreponham"
+    
+    
+    */
+}
+
+/*responsividade*/
+
+/*Ajuste para Telas grandes (Larguras acima de 1200px)*/
+@media (min-width: 1200px) {
+    .box {
+        width: calc(33.333% - 2rem); /*Largura de 33.333% para três caixas por linha*/
+    }
+
+    
+}
+
+
+
+
